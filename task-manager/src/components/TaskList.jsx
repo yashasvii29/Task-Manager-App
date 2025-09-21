@@ -5,10 +5,12 @@ import TaskItem from './TaskItem';
 const TaskList = () => {
 
     const [items, filters] = useSelector(state => state.tasks);
-    console.log(items, 'items')
+    const filtered = filters === 'completed' ? items.filter(task => task.completed) : items;
+    console.log(items, 'items');
+
   return (
-    <ul>
-        {items.map(task =>(
+    <ul className=''>
+        {filtered.map(task =>(
             <TaskItem key={task.id} task={task}/>
         ))}
     </ul>
