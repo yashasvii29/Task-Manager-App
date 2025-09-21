@@ -2,7 +2,7 @@ import React from 'react'
 import {useDispatch} from 'react-redux';
 import { deleteTask, toggleTask } from '../features/task/taskSlice';        
 
-const TaskItem = (task) => {
+const TaskItem = ({task}) => {
     const dispatch = useDispatch();
   return (
     <li className={`task ${task.completed ? 'completed' : ''}`}>
