@@ -4,7 +4,7 @@ import { setFilter } from '../features/task/taskSlice';
 
 const FilterTask = () => {
 
-    const filter = useSelector(state => state.tasks.filter);
+    const filter = useSelector(state => state.tasks.filters);
     const dispatch = useDispatch();
     console.log(filter);
   return (
