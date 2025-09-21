@@ -1,5 +1,5 @@
 // In this file we will create a slice
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, nanoid} from "@reduxjs/toolkit";
 
 const taskSlice = createSlice({
     name : "tasks",
